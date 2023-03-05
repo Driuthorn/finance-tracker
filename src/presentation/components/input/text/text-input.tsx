@@ -2,7 +2,7 @@ import { useTheme } from "@src/presentation/hooks/useTheme";
 import React, { forwardRef, memo, useCallback, useMemo, useState } from "react";
 import { createStyle } from "./styles";
 
-import MaterialIcon from 'react-native-vector-icons/MaterialIcons'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import { 
   Platform,
@@ -85,16 +85,17 @@ export const Input = memo(
         <TouchableOpacity
           activeOpacity={1}
           style={Styles.containerPasswordIcon}
-          onPress={() => 
-            setState(prev => ({
-              ...prev,
-              secureTextEntry: !prev.secureTextEntry
-            }))
+          onPress={() => {
+              setState(prev => ({
+                ...prev,
+                secureTextEntry: !prev.secureTextEntry
+              }))
+            }
           }>
           {state.secureTextEntry ? (
-            <MaterialIcon name="eye" style={Styles.icon} />
+            <MaterialIcons name="visibility-off" style={Styles.icon} />
           ): (
-            <MaterialIcon name="eye-off" style={Styles.icon} />
+            <MaterialIcons name="visibility" style={Styles.icon} />
           )}
         </TouchableOpacity>
       )
