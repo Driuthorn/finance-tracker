@@ -1,6 +1,6 @@
-import { navigate } from "@src/main/routes/rootNavigation"
 import { NavigationProp } from "@src/main/routes/router"
 import { Button } from "@src/presentation/components/button/button"
+import { GradientButton } from "@src/presentation/components/gradientButton/gradientButton"
 import { Input } from "@src/presentation/components/input"
 import { useTheme } from "@src/presentation/hooks/useTheme"
 import React from "react"
@@ -63,16 +63,23 @@ export const LoginScreen = ({
           testID={'input-password'}
           value={state.password}
           keyboardType={'default'}
+          password={true}
           onChangeText={_ => onChangeInputValue(_, 'password')}
-          autoCapitalize="characters"
+          autoCapitalize="none"
         />
-        <Button
+        <GradientButton
+          testID="button-submit"  
+          onPress={proceed}
+        >
+          Submit
+        </GradientButton>
+        {/* <Button
           testID="button-submit"
           color={theme.colors.GR_PRIMARY}
           onPress={proceed}
         >
           Submit
-        </Button>
+        </Button> */}
       </View>
     </View>
   )
