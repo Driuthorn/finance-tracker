@@ -6,6 +6,9 @@ export const createStyle = (theme: Theme) =>
     inputContainer: {
       position: 'relative',
       borderColor: theme.colors.PRIMARY,
+      paddingHorizontal: 16,
+      paddingVertical: 18,
+      overflow: 'hidden'
     },
     inputContainerFocused: {
       borderBottomColor: theme.colors.INPUT_BORDER_BOTTOM
@@ -28,7 +31,7 @@ export const createStyle = (theme: Theme) =>
       alignItems: 'center',
       justifyContent: 'flex-end',
       position: 'absolute',
-      right: 0
+      right: 15
     },
     containerIcon: {
       ...StyleSheet.absoluteFillObject,
@@ -50,7 +53,9 @@ export const createStyle = (theme: Theme) =>
       flex: 1,
       borderWidth: 2,
       borderColor: theme.colors.PRIMARY,
-      borderRadius: 15
+      borderRadius: 15,
+      margin: 0,
+      paddingLeft: 10
     },
     rowInput: {
       flexDirection: 'row',

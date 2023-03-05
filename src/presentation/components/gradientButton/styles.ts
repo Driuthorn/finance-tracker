@@ -5,7 +5,6 @@ export const createStyles = (theme: Theme) =>
   StyleSheet.create({
     container: {
       width: '50%',
-      backgroundColor: theme.colors.GR_PRIMARY,
       padding: 15,
       justifyContent: 'space-between',
       borderRadius: 25,
