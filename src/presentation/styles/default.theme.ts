@@ -32,13 +32,23 @@ export const defaultTheme = {
     INPUT_ICON: '#C0C0C0',
     INPUT_BORDER_BOTTOM: '#8BFF1E',
 
+    MENU_ICON: '#57B400',
+
     ERROR: '#FF0000',
     SUCCESS: '#54B948',
     WARN: '#FFCF01',
 
     WHITE: '#FFFFFF',
     RED: '#6f1717',
-    PURPLE: '#8302E9'
+    PURPLE: '#8302E9',
+
+    BACKGROUND_COLOR: '#1A1A1A',
+
+    BOX_BACKGROUND_COLOR: '#595959',
+
+    LOADING_BACKGROUND_PRIMARY: '#000000B3',
+    LOADING_BACKGROUND_SECONDARY: '#041E42',
+    LOADING_TEXT: '#fff',
   },
   screen: {
     padding: '5%',

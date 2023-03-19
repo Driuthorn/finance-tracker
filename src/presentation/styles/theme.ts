@@ -46,11 +46,20 @@ export interface Theme {
     TEXT_PRIMARY: string
     TEXT_SECONDARY: string
 
+    BACKGROUND_COLOR: string
+
+    BOX_BACKGROUND_COLOR: string
+
     INPUT_ICON: string
     INPUT_BORDER_BOTTOM: string
+    MENU_ICON: string
     WHITE: string
     RED: string
     PURPLE: string
+
+    LOADING_BACKGROUND_PRIMARY: string
+    LOADING_BACKGROUND_SECONDARY: string
+    LOADING_TEXT: string
   }
   screen: {
     padding: number | string
