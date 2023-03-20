@@ -2,6 +2,7 @@ import { NavigationProp } from "@src/main/routes/router"
 import { Button } from "@src/presentation/components/button/button"
 import { GradientButton } from "@src/presentation/components/gradientButton/gradientButton"
 import { Input } from "@src/presentation/components/input"
+import { LoadingFullScreen } from "@src/presentation/components/loading/fullscreen/loading"
 import { useTheme } from "@src/presentation/hooks/useTheme"
 import React from "react"
 import { useEffect, useState } from "react"
@@ -40,9 +41,14 @@ export const LoginScreen = ({
   }
 
   const proceed = async () => {
-    if (state.password && state.username) {
-      navigation.navigate('home')
-    }
+    setLoading(prev => ({ ...prev, text: 'test', visible: true}))
+    setTimeout(() => {
+      setLoading(prev => ({ ...prev, visible: false}))
+      // if (state.password && state.username) {
+        navigation.navigate('home')
+      // }
+    }, 2000)
+    
   }
 
   return (
@@ -73,6 +79,7 @@ export const LoginScreen = ({
         >
           Submit
         </GradientButton>
+        <LoadingFullScreen text={loading.text} visible={loading.visible} />
         {/* <Button
           testID="button-submit"
           color={theme.colors.GR_PRIMARY}
