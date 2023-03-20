@@ -6,6 +6,7 @@ import { navigationRef } from '@src/main/routes/rootNavigation'
 import { MakeLoginScreen } from '../factories/screens/login-factory'
 import { MakeHomeScreen } from '../factories/screens/home-factory'
 import { MakeCalendarScreen } from '../factories/screens/calendar-factory'
+import { MakeSideMenuComponent } from '../factories/components/sideMenu/sidemenu'
 
 export type RootStackParamList = {
   ['login']: undefined
@@ -20,18 +21,20 @@ const Stack = createNativeStackNavigator<RootStackParamList>()
 const StackNavigator = () => (
   <Stack.Navigator
     screenOptions={{
-      headerShown: false,
+      headerShown: true,
       animation: 'slide_from_right',
       contentStyle: {
         backgroundColor: 'transparent'
-      }
+      },
+      header: props => <MakeSideMenuComponent {...props} {...props.options} />
     }}
   >
     <Stack.Screen
       name='login'
       component={MakeLoginScreen}
       options={{
-        title: 'Login'
+        title: 'Login',
+        headerShown: false,
       }}
     />
     <Stack.Screen
