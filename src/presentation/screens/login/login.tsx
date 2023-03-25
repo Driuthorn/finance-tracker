@@ -1,11 +1,10 @@
 import { NavigationProp } from "@src/main/routes/router"
-import { Button } from "@src/presentation/components/button/button"
 import { GradientButton } from "@src/presentation/components/gradientButton/gradientButton"
 import { Input } from "@src/presentation/components/input"
 import { LoadingFullScreen } from "@src/presentation/components/loading/fullscreen/loading"
 import { useTheme } from "@src/presentation/hooks/useTheme"
 import React from "react"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { View } from "react-native"
 import { createStyles } from "./styles"
 
@@ -80,13 +79,6 @@ export const LoginScreen = ({
           Submit
         </GradientButton>
         <LoadingFullScreen text={loading.text} visible={loading.visible} />
-        {/* <Button
-          testID="button-submit"
-          color={theme.colors.GR_PRIMARY}
-          onPress={proceed}
-        >
-          Submit
-        </Button> */}
       </View>
     </View>
   )
