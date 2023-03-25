@@ -35,9 +35,49 @@ export const CalendarScreen = ({
 
   }
 
+  const renderCalendarHeader = (day: string, month: string) => {
+    return (
+      <>
+        <View style={Styles.headerContent}>
+          <Text style={Styles.headerText}>{day} {month}</Text>
+          <View style={Styles.underline}></View>
+        </View>
+      </>
+    )
+  }
+
+  const renderCalendarBody = () => {
+    return (
+      <>
+        <View style={Styles.bodyContent}>
+          <View style={[Styles.greenBox, Styles.contentBox]}>
+            <Text style={Styles.boxContentHeader}>Dividendos FIIs</Text>
+            <Text style={Styles.boxContentBody}>R$ 2.000,00</Text>
+          </View>
+          <View style={[Styles.redBox, Styles.contentBox]}>
+            <Text style={Styles.boxContentHeader}>Luz</Text>
+            <Text style={Styles.boxContentBody}>R$ 2.000,00</Text>
+          </View>
+        </View> 
+      </>
+    )
+  }
+
+  const renderCalendar = (day: string, month: string) => {
+    return (
+      <>
+        {renderCalendarHeader(day, month)}
+        {renderCalendarBody()}
+      </>
+    )
+  }
+
   return (
     <View style={Styles.container}>
-      <Text>CalendarScreen</Text>
+      {renderCalendar('01', 'Mar')}
+      {renderCalendar('02', 'Mar')}
+      {renderCalendar('03', 'Mar')}
+      {renderCalendar('04', 'Mar')}
     </View>
   )
 }
