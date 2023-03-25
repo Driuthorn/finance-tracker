@@ -26,10 +26,10 @@ export const SideMenu = ({
   return (
     <View testID={testID} style={Styles.container}>
       <TouchableOpacity>
-        <MaterialIcons name="home" style={Styles.icon} />
+        <MaterialIcons name="home" style={Styles.icon} onPress={onHomePress}/>
       </TouchableOpacity>
       <TouchableOpacity>
-        <MaterialIcons name="calendar-today" style={Styles.icon} />
+        <MaterialIcons name="calendar-today" style={Styles.icon} onPress={onCalendarPress}/>
       </TouchableOpacity>
       <TouchableOpacity>
         <MaterialIcons name="bar-chart" style={Styles.icon} />
