@@ -3,6 +3,7 @@ import { NavigationProp } from "@src/main/routes/router"
 import { useTheme } from "@src/presentation/hooks/useTheme"
 import { useState } from "react"
 import { createStyles } from "./styles"
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import { View, Text } from 'react-native'
 
 const getWeekDay = (day: number) => {
@@ -68,11 +69,48 @@ export const HomeScreen = ({
       </View>
       <View style={Styles.content}>
         <View style={[Styles.contentBox, Styles.contentBoxBorder, Styles.greenContentBox]}>
-
+          <View>
+            <Text style={[Styles.contentBoxHeader, Styles.greenText]}>Créditos:</Text>
+          </View>
+          <View style={Styles.inlineTextIcon}>
+            <MaterialIcons name="fiber-manual-record" style={Styles.icon} />
+            <Text>Pagamento</Text>
+          </View>
+          <View style={Styles.inlineTextIcon}>
+            <MaterialIcons name="fiber-manual-record" style={Styles.icon} />
+            <Text>Dividendos</Text>
+          </View>
         </View>
-        <View style={[Styles.contentBox, Styles.contentBoxBorder, Styles.redContentBox]}></View>
-
-        <View style={[Styles.contentBox, Styles.contentBoxBorderless, Styles.contentBoxBorderless]}></View>
+        <View style={[Styles.contentBox, Styles.contentBoxBorder, Styles.redContentBox]}>
+          <View>
+            <Text style={[Styles.contentBoxHeader, Styles.redText]}>Débitos:</Text>
+          </View>
+          <View style={Styles.inlineTextIcon}>
+            <MaterialIcons name="fiber-manual-record" style={Styles.icon} />
+            <Text>luz</Text>
+          </View>
+          <View style={Styles.inlineTextIcon}>
+            <MaterialIcons name="fiber-manual-record" style={Styles.icon} />
+            <Text>Carro</Text>
+          </View>
+        </View>
+        <View style={[Styles.contentBox, Styles.contentBoxBorderless, Styles.contentBoxBorderless]}>
+          <View>
+            <Text style={[Styles.contentBoxHeader]}>Prestação de contas:</Text>
+          </View>
+          <View style={Styles.inlineTextIcon}>
+            <Text>Sem comprovantes:</Text>
+            <Text style={Styles.redText}> 3 </Text> 
+          </View>
+          <View style={Styles.inlineTextIcon}>
+            <Text>Em atraso:</Text> 
+            <Text style={Styles.redText}> 2 </Text>
+          </View>
+          <View style={Styles.inlineTextIcon}>
+            <Text>A receber:</Text> 
+            <Text style={Styles.greenText}> 2 </Text>
+          </View>
+        </View>
       </View>
     </View>
   )

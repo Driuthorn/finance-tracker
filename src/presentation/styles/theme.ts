@@ -50,6 +50,9 @@ export interface Theme {
 
     BOX_BACKGROUND_COLOR: string
 
+    GREEN_BOX_BORDER_COLOR: string
+    RED_BOX_BORDER_COLOR: string
+
     INPUT_ICON: string
     INPUT_BORDER_BOTTOM: string
     MENU_ICON: string
